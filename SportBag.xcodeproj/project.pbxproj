@@ -1,0 +1,709 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		642FA8A22D64C49D0025FBF0 /* FlagsmithClient in Frameworks */ = {isa = PBXBuildFile; productRef = 642FA8A12D64C49D0025FBF0 /* FlagsmithClient */; };
+		642FA8A52D64C4A60025FBF0 /* SdkPushExpress in Frameworks */ = {isa = PBXBuildFile; productRef = 642FA8A42D64C4A60025FBF0 /* SdkPushExpress */; };
+		646FE6592D6108B80092780B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE6582D6108B80092780B /* AppDelegate.swift */; };
+		646FE65B2D6108B80092780B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE65A2D6108B80092780B /* SceneDelegate.swift */; };
+		646FE65D2D6108B80092780B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE65C2D6108B80092780B /* ViewController.swift */; };
+		646FE6602D6108B80092780B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 646FE65F2D6108B80092780B /* Base */; };
+		646FE6622D6108B90092780B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 646FE6612D6108B90092780B /* Assets.xcassets */; };
+		646FE6652D6108B90092780B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 646FE6642D6108B90092780B /* Base */; };
+		646FE66F2D61E3790092780B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE66E2D61E3790092780B /* HomeView.swift */; };
+		646FE6722D61E6260092780B /* ChooseWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE6712D61E6260092780B /* ChooseWorkoutView.swift */; };
+		646FE6752D61E8E10092780B /* BagDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE6742D61E8E10092780B /* BagDetailView.swift */; };
+		646FE6782D61E9F70092780B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE6772D61E9F70092780B /* DataManager.swift */; };
+		646FE67A2D61F7C80092780B /* EqCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE6792D61F7C80092780B /* EqCell.swift */; };
+		646FE67C2D61FB4F0092780B /* EqSmallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE67B2D61FB4F0092780B /* EqSmallCell.swift */; };
+		646FE67F2D622AA10092780B /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE67E2D622AA10092780B /* RealmManager.swift */; };
+		646FE6822D622AF10092780B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 646FE6812D622AF10092780B /* RealmSwift */; };
+		646FE6832D622B170092780B /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 646FE6812D622AF10092780B /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		646FE6872D62365A0092780B /* SavedBags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE6862D62365A0092780B /* SavedBags.swift */; };
+		646FE6892D6237320092780B /* SavedBagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE6882D6237320092780B /* SavedBagCell.swift */; };
+		646FE68B2D6239FC0092780B /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE68A2D6239FC0092780B /* Test.swift */; };
+		646FE68E2D6240CA0092780B /* SavedBagsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE68D2D6240CA0092780B /* SavedBagsDetailView.swift */; };
+		646FE6902D6241340092780B /* SavedBagItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE68F2D6241340092780B /* SavedBagItemsCell.swift */; };
+		646FE6932D62480A0092780B /* MainBagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE6922D62480A0092780B /* MainBagView.swift */; };
+		646FE6952D6249BA0092780B /* MainBagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE6942D6249BA0092780B /* MainBagCell.swift */; };
+		646FE6982D6251A60092780B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE6972D6251A60092780B /* OnboardingView.swift */; };
+		646FE69B2D6251B00092780B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE69A2D6251B00092780B /* SettingsView.swift */; };
+		646FE69E2D6252A60092780B /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE69D2D6252A60092780B /* ReminderView.swift */; };
+		646FE6A12D62720B0092780B /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE6A02D62720B0092780B /* NotificationsView.swift */; };
+		B125E2CECCECF9274769BF7D /* Pods_SportBag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7700258B7A6F10B933352ED5 /* Pods_SportBag.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		646FE6842D622B170092780B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				646FE6832D622B170092780B /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		642FA89F2D64C48C0025FBF0 /* SportBag.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SportBag.entitlements; sourceTree = "<group>"; };
+		646FE6552D6108B80092780B /* SportBag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportBag.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		646FE6582D6108B80092780B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		646FE65A2D6108B80092780B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		646FE65C2D6108B80092780B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		646FE65F2D6108B80092780B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		646FE6612D6108B90092780B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		646FE6642D6108B90092780B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		646FE6662D6108B90092780B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		646FE66E2D61E3790092780B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		646FE6712D61E6260092780B /* ChooseWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseWorkoutView.swift; sourceTree = "<group>"; };
+		646FE6742D61E8E10092780B /* BagDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagDetailView.swift; sourceTree = "<group>"; };
+		646FE6772D61E9F70092780B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		646FE6792D61F7C80092780B /* EqCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqCell.swift; sourceTree = "<group>"; };
+		646FE67B2D61FB4F0092780B /* EqSmallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqSmallCell.swift; sourceTree = "<group>"; };
+		646FE67E2D622AA10092780B /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		646FE6862D62365A0092780B /* SavedBags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedBags.swift; sourceTree = "<group>"; };
+		646FE6882D6237320092780B /* SavedBagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedBagCell.swift; sourceTree = "<group>"; };
+		646FE68A2D6239FC0092780B /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		646FE68D2D6240CA0092780B /* SavedBagsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedBagsDetailView.swift; sourceTree = "<group>"; };
+		646FE68F2D6241340092780B /* SavedBagItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedBagItemsCell.swift; sourceTree = "<group>"; };
+		646FE6922D62480A0092780B /* MainBagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBagView.swift; sourceTree = "<group>"; };
+		646FE6942D6249BA0092780B /* MainBagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBagCell.swift; sourceTree = "<group>"; };
+		646FE6972D6251A60092780B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		646FE69A2D6251B00092780B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		646FE69D2D6252A60092780B /* ReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
+		646FE6A02D62720B0092780B /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		7700258B7A6F10B933352ED5 /* Pods_SportBag.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportBag.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3C5A0E494D4E009EAFB9502 /* Pods-SportBag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportBag.release.xcconfig"; path = "Target Support Files/Pods-SportBag/Pods-SportBag.release.xcconfig"; sourceTree = "<group>"; };
+		B940250DAAFC4AF817DD5E3B /* Pods-SportBag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportBag.debug.xcconfig"; path = "Target Support Files/Pods-SportBag/Pods-SportBag.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		646FE6522D6108B80092780B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				646FE6822D622AF10092780B /* RealmSwift in Frameworks */,
+				642FA8A22D64C49D0025FBF0 /* FlagsmithClient in Frameworks */,
+				642FA8A52D64C4A60025FBF0 /* SdkPushExpress in Frameworks */,
+				B125E2CECCECF9274769BF7D /* Pods_SportBag.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		646FE64C2D6108B80092780B = {
+			isa = PBXGroup;
+			children = (
+				646FE6572D6108B80092780B /* SportBag */,
+				646FE6562D6108B80092780B /* Products */,
+				A22BB7AA5A850292A5D6E4D9 /* Pods */,
+				A37C2F627E1E7CBFFDCDF7D1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		646FE6562D6108B80092780B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				646FE6552D6108B80092780B /* SportBag.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		646FE6572D6108B80092780B /* SportBag */ = {
+			isa = PBXGroup;
+			children = (
+				642FA89F2D64C48C0025FBF0 /* SportBag.entitlements */,
+				646FE69F2D6272020092780B /* Notificatioins */,
+				646FE69C2D62529E0092780B /* Reminder */,
+				646FE6992D6251A80092780B /* Settings */,
+				646FE6962D6251970092780B /* Onboarding */,
+				646FE6912D6248010092780B /* MainBag */,
+				646FE68C2D6240BE0092780B /* SavedBagsDetail */,
+				646FE6852D6236490092780B /* SavedBags */,
+				646FE67D2D622A990092780B /* RealmManager */,
+				646FE6762D61E9DC0092780B /* DataManager */,
+				646FE6732D61E8CC0092780B /* BagDetail */,
+				646FE6702D61E6140092780B /* ChooseWorkout */,
+				646FE66D2D61E36D0092780B /* Home */,
+				646FE66C2D6109060092780B /* AppManagment */,
+				646FE65E2D6108B80092780B /* Main.storyboard */,
+				646FE6612D6108B90092780B /* Assets.xcassets */,
+				646FE6632D6108B90092780B /* LaunchScreen.storyboard */,
+				646FE6662D6108B90092780B /* Info.plist */,
+				646FE68A2D6239FC0092780B /* Test.swift */,
+			);
+			path = SportBag;
+			sourceTree = "<group>";
+		};
+		646FE66C2D6109060092780B /* AppManagment */ = {
+			isa = PBXGroup;
+			children = (
+				646FE6582D6108B80092780B /* AppDelegate.swift */,
+				646FE65A2D6108B80092780B /* SceneDelegate.swift */,
+				646FE65C2D6108B80092780B /* ViewController.swift */,
+			);
+			path = AppManagment;
+			sourceTree = "<group>";
+		};
+		646FE66D2D61E36D0092780B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				646FE66E2D61E3790092780B /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		646FE6702D61E6140092780B /* ChooseWorkout */ = {
+			isa = PBXGroup;
+			children = (
+				646FE6712D61E6260092780B /* ChooseWorkoutView.swift */,
+			);
+			path = ChooseWorkout;
+			sourceTree = "<group>";
+		};
+		646FE6732D61E8CC0092780B /* BagDetail */ = {
+			isa = PBXGroup;
+			children = (
+				646FE6742D61E8E10092780B /* BagDetailView.swift */,
+				646FE6792D61F7C80092780B /* EqCell.swift */,
+				646FE67B2D61FB4F0092780B /* EqSmallCell.swift */,
+			);
+			path = BagDetail;
+			sourceTree = "<group>";
+		};
+		646FE6762D61E9DC0092780B /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				646FE6772D61E9F70092780B /* DataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		646FE67D2D622A990092780B /* RealmManager */ = {
+			isa = PBXGroup;
+			children = (
+				646FE67E2D622AA10092780B /* RealmManager.swift */,
+			);
+			path = RealmManager;
+			sourceTree = "<group>";
+		};
+		646FE6852D6236490092780B /* SavedBags */ = {
+			isa = PBXGroup;
+			children = (
+				646FE6862D62365A0092780B /* SavedBags.swift */,
+				646FE6882D6237320092780B /* SavedBagCell.swift */,
+			);
+			path = SavedBags;
+			sourceTree = "<group>";
+		};
+		646FE68C2D6240BE0092780B /* SavedBagsDetail */ = {
+			isa = PBXGroup;
+			children = (
+				646FE68D2D6240CA0092780B /* SavedBagsDetailView.swift */,
+				646FE68F2D6241340092780B /* SavedBagItemsCell.swift */,
+			);
+			path = SavedBagsDetail;
+			sourceTree = "<group>";
+		};
+		646FE6912D6248010092780B /* MainBag */ = {
+			isa = PBXGroup;
+			children = (
+				646FE6922D62480A0092780B /* MainBagView.swift */,
+				646FE6942D6249BA0092780B /* MainBagCell.swift */,
+			);
+			path = MainBag;
+			sourceTree = "<group>";
+		};
+		646FE6962D6251970092780B /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				646FE6972D6251A60092780B /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		646FE6992D6251A80092780B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				646FE69A2D6251B00092780B /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		646FE69C2D62529E0092780B /* Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				646FE69D2D6252A60092780B /* ReminderView.swift */,
+			);
+			path = Reminder;
+			sourceTree = "<group>";
+		};
+		646FE69F2D6272020092780B /* Notificatioins */ = {
+			isa = PBXGroup;
+			children = (
+				646FE6A02D62720B0092780B /* NotificationsView.swift */,
+			);
+			path = Notificatioins;
+			sourceTree = "<group>";
+		};
+		A22BB7AA5A850292A5D6E4D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B940250DAAFC4AF817DD5E3B /* Pods-SportBag.debug.xcconfig */,
+				A3C5A0E494D4E009EAFB9502 /* Pods-SportBag.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A37C2F627E1E7CBFFDCDF7D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7700258B7A6F10B933352ED5 /* Pods_SportBag.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		646FE6542D6108B80092780B /* SportBag */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 646FE6692D6108B90092780B /* Build configuration list for PBXNativeTarget "SportBag" */;
+			buildPhases = (
+				FB633437A300C1BCB7E9EEF9 /* [CP] Check Pods Manifest.lock */,
+				646FE6512D6108B80092780B /* Sources */,
+				646FE6522D6108B80092780B /* Frameworks */,
+				646FE6532D6108B80092780B /* Resources */,
+				646FE6842D622B170092780B /* Embed Frameworks */,
+				984045BC43F1316AC90A7364 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SportBag;
+			packageProductDependencies = (
+				646FE6812D622AF10092780B /* RealmSwift */,
+				642FA8A12D64C49D0025FBF0 /* FlagsmithClient */,
+				642FA8A42D64C4A60025FBF0 /* SdkPushExpress */,
+			);
+			productName = SportBag;
+			productReference = 646FE6552D6108B80092780B /* SportBag.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		646FE64D2D6108B80092780B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					646FE6542D6108B80092780B = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = 646FE6502D6108B80092780B /* Build configuration list for PBXProject "SportBag" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 646FE64C2D6108B80092780B;
+			packageReferences = (
+				646FE6802D622AF10092780B /* XCRemoteSwiftPackageReference "realm-swift" */,
+				642FA8A02D64C49D0025FBF0 /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */,
+				642FA8A32D64C4A60025FBF0 /* XCRemoteSwiftPackageReference "pushexpress-swift-sdk" */,
+			);
+			productRefGroup = 646FE6562D6108B80092780B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				646FE6542D6108B80092780B /* SportBag */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		646FE6532D6108B80092780B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				646FE6622D6108B90092780B /* Assets.xcassets in Resources */,
+				646FE6652D6108B90092780B /* Base in Resources */,
+				646FE6602D6108B80092780B /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		984045BC43F1316AC90A7364 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SportBag/Pods-SportBag-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SportBag/Pods-SportBag-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SportBag/Pods-SportBag-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB633437A300C1BCB7E9EEF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SportBag-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		646FE6512D6108B80092780B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				646FE6872D62365A0092780B /* SavedBags.swift in Sources */,
+				646FE6902D6241340092780B /* SavedBagItemsCell.swift in Sources */,
+				646FE67A2D61F7C80092780B /* EqCell.swift in Sources */,
+				646FE6982D6251A60092780B /* OnboardingView.swift in Sources */,
+				646FE6752D61E8E10092780B /* BagDetailView.swift in Sources */,
+				646FE65D2D6108B80092780B /* ViewController.swift in Sources */,
+				646FE69E2D6252A60092780B /* ReminderView.swift in Sources */,
+				646FE68E2D6240CA0092780B /* SavedBagsDetailView.swift in Sources */,
+				646FE6932D62480A0092780B /* MainBagView.swift in Sources */,
+				646FE67C2D61FB4F0092780B /* EqSmallCell.swift in Sources */,
+				646FE6722D61E6260092780B /* ChooseWorkoutView.swift in Sources */,
+				646FE68B2D6239FC0092780B /* Test.swift in Sources */,
+				646FE6782D61E9F70092780B /* DataManager.swift in Sources */,
+				646FE66F2D61E3790092780B /* HomeView.swift in Sources */,
+				646FE67F2D622AA10092780B /* RealmManager.swift in Sources */,
+				646FE6592D6108B80092780B /* AppDelegate.swift in Sources */,
+				646FE6892D6237320092780B /* SavedBagCell.swift in Sources */,
+				646FE6952D6249BA0092780B /* MainBagCell.swift in Sources */,
+				646FE65B2D6108B80092780B /* SceneDelegate.swift in Sources */,
+				646FE69B2D6251B00092780B /* SettingsView.swift in Sources */,
+				646FE6A12D62720B0092780B /* NotificationsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		646FE65E2D6108B80092780B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				646FE65F2D6108B80092780B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		646FE6632D6108B90092780B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				646FE6642D6108B90092780B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		646FE6672D6108B90092780B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		646FE6682D6108B90092780B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		646FE66A2D6108B90092780B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B940250DAAFC4AF817DD5E3B /* Pods-SportBag.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SportBag/SportBag.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SportBag/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SportBag;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		646FE66B2D6108B90092780B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3C5A0E494D4E009EAFB9502 /* Pods-SportBag.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SportBag/SportBag.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SportBag/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SportBag;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		646FE6502D6108B80092780B /* Build configuration list for PBXProject "SportBag" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				646FE6672D6108B90092780B /* Debug */,
+				646FE6682D6108B90092780B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		646FE6692D6108B90092780B /* Build configuration list for PBXNativeTarget "SportBag" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				646FE66A2D6108B90092780B /* Debug */,
+				646FE66B2D6108B90092780B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		642FA8A02D64C49D0025FBF0 /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flagsmith/flagsmith-ios-client.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.8.1;
+			};
+		};
+		642FA8A32D64C4A60025FBF0 /* XCRemoteSwiftPackageReference "pushexpress-swift-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pushexpress/pushexpress-swift-sdk";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		646FE6802D622AF10092780B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		642FA8A12D64C49D0025FBF0 /* FlagsmithClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 642FA8A02D64C49D0025FBF0 /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */;
+			productName = FlagsmithClient;
+		};
+		642FA8A42D64C4A60025FBF0 /* SdkPushExpress */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 642FA8A32D64C4A60025FBF0 /* XCRemoteSwiftPackageReference "pushexpress-swift-sdk" */;
+			productName = SdkPushExpress;
+		};
+		646FE6812D622AF10092780B /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 646FE6802D622AF10092780B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 646FE64D2D6108B80092780B /* Project object */;
+}
