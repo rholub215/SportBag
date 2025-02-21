@@ -11,6 +11,7 @@ struct EqSmallCell: View {
     @Binding var equipment: Equipment
         
     @State private var showPicker: Bool = false
+    @State private var sourceType: UIImagePickerController.SourceType = .photoLibrary
     
     var completion: () -> ()
     
@@ -39,24 +40,48 @@ struct EqSmallCell: View {
                             .clipped()
                             .cornerRadius(8)
                     } else {
-                        Button {
-                            showPicker.toggle()
-                        } label: {
-                            Rectangle()
-                                .foregroundStyle(.white)
-                                .cornerRadius(8)
-                                .frame(width: 60, height: 60)
-                                .overlay {
-                                    RoundedRectangle(cornerRadius: 8)
-                                        .stroke(lineWidth: 2)
-                                        .foregroundStyle(.purpleButton)
-                                }
-                                .overlay {
-                                    Image(systemName: "plus")
-                                        .font(.system(size: 24, weight: .black))
-                                        .foregroundStyle(.greenButton)
-                                }
+                        HStack {
+                            Button {
+                                sourceType = .photoLibrary
+                                showPicker.toggle()
+                            } label: {
+                                Rectangle()
+                                    .foregroundStyle(.white)
+                                    .cornerRadius(8)
+                                    .frame(width: 60, height: 60)
+                                    .overlay {
+                                        RoundedRectangle(cornerRadius: 8)
+                                            .stroke(lineWidth: 2)
+                                            .foregroundStyle(.purpleButton)
+                                    }
+                                    .overlay {
+                                        Image(systemName: "photo.on.rectangle.angled")
+                                            .font(.system(size: 24, weight: .regular))
+                                            .foregroundStyle(.greenButton)
+                                    }
+                            }
+                            
+                            Button {
+                                sourceType = .camera
+                                showPicker.toggle()
+                            } label: {
+                                Rectangle()
+                                    .foregroundStyle(.white)
+                                    .cornerRadius(8)
+                                    .frame(width: 60, height: 60)
+                                    .overlay {
+                                        RoundedRectangle(cornerRadius: 8)
+                                            .stroke(lineWidth: 2)
+                                            .foregroundStyle(.purpleButton)
+                                    }
+                                    .overlay {
+                                        Image(systemName: "camera")
+                                            .font(.system(size: 24, weight: .regular))
+                                            .foregroundStyle(.greenButton)
+                                    }
+                            }
                         }
+                       
                     }
                     
                     
@@ -89,7 +114,7 @@ struct EqSmallCell: View {
             }
      
             .sheet(isPresented: $showPicker) {
-                ImagePicker(sourceType: .photoLibrary, selectedImage: $equipment.image)
+                ImagePicker(sourceType: sourceType, selectedImage: $equipment.image)
                     .ignoresSafeArea()
             }
     }

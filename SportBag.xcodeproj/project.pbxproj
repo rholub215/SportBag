@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		642FA8A22D64C49D0025FBF0 /* FlagsmithClient in Frameworks */ = {isa = PBXBuildFile; productRef = 642FA8A12D64C49D0025FBF0 /* FlagsmithClient */; };
 		642FA8A52D64C4A60025FBF0 /* SdkPushExpress in Frameworks */ = {isa = PBXBuildFile; productRef = 642FA8A42D64C4A60025FBF0 /* SdkPushExpress */; };
+		644235382D677BFB005398DE /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644235372D677BFB005398DE /* NotificationService.swift */; };
+		6442353C2D677BFB005398DE /* notificationsvc.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 644235352D677BFB005398DE /* notificationsvc.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		644235422D677C05005398DE /* SdkPushExpress in Frameworks */ = {isa = PBXBuildFile; productRef = 644235412D677C05005398DE /* SdkPushExpress */; };
+		644235452D688072005398DE /* EnterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644235442D688072005398DE /* EnterView.swift */; };
 		646FE6592D6108B80092780B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE6582D6108B80092780B /* AppDelegate.swift */; };
 		646FE65B2D6108B80092780B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE65A2D6108B80092780B /* SceneDelegate.swift */; };
 		646FE65D2D6108B80092780B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE65C2D6108B80092780B /* ViewController.swift */; };
@@ -26,7 +30,6 @@
 		646FE6832D622B170092780B /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 646FE6812D622AF10092780B /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		646FE6872D62365A0092780B /* SavedBags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE6862D62365A0092780B /* SavedBags.swift */; };
 		646FE6892D6237320092780B /* SavedBagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE6882D6237320092780B /* SavedBagCell.swift */; };
-		646FE68B2D6239FC0092780B /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE68A2D6239FC0092780B /* Test.swift */; };
 		646FE68E2D6240CA0092780B /* SavedBagsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE68D2D6240CA0092780B /* SavedBagsDetailView.swift */; };
 		646FE6902D6241340092780B /* SavedBagItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE68F2D6241340092780B /* SavedBagItemsCell.swift */; };
 		646FE6932D62480A0092780B /* MainBagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FE6922D62480A0092780B /* MainBagView.swift */; };
@@ -38,7 +41,28 @@
 		B125E2CECCECF9274769BF7D /* Pods_SportBag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7700258B7A6F10B933352ED5 /* Pods_SportBag.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6442353A2D677BFB005398DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 646FE64D2D6108B80092780B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 644235342D677BFB005398DE;
+			remoteInfo = notificationsvc;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
+		6442353D2D677BFB005398DE /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6442353C2D677BFB005398DE /* notificationsvc.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		646FE6842D622B170092780B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,6 +78,10 @@
 
 /* Begin PBXFileReference section */
 		642FA89F2D64C48C0025FBF0 /* SportBag.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SportBag.entitlements; sourceTree = "<group>"; };
+		644235352D677BFB005398DE /* notificationsvc.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = notificationsvc.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		644235372D677BFB005398DE /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		644235392D677BFB005398DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		644235442D688072005398DE /* EnterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterView.swift; sourceTree = "<group>"; };
 		646FE6552D6108B80092780B /* SportBag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportBag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		646FE6582D6108B80092780B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		646FE65A2D6108B80092780B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,7 +99,6 @@
 		646FE67E2D622AA10092780B /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		646FE6862D62365A0092780B /* SavedBags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedBags.swift; sourceTree = "<group>"; };
 		646FE6882D6237320092780B /* SavedBagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedBagCell.swift; sourceTree = "<group>"; };
-		646FE68A2D6239FC0092780B /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		646FE68D2D6240CA0092780B /* SavedBagsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedBagsDetailView.swift; sourceTree = "<group>"; };
 		646FE68F2D6241340092780B /* SavedBagItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedBagItemsCell.swift; sourceTree = "<group>"; };
 		646FE6922D62480A0092780B /* MainBagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBagView.swift; sourceTree = "<group>"; };
@@ -86,6 +113,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		644235322D677BFB005398DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				644235422D677C05005398DE /* SdkPushExpress in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		646FE6522D6108B80092780B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -100,10 +135,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		644235362D677BFB005398DE /* notificationsvc */ = {
+			isa = PBXGroup;
+			children = (
+				644235372D677BFB005398DE /* NotificationService.swift */,
+				644235392D677BFB005398DE /* Info.plist */,
+			);
+			path = notificationsvc;
+			sourceTree = "<group>";
+		};
+		644235432D688066005398DE /* Enter */ = {
+			isa = PBXGroup;
+			children = (
+				644235442D688072005398DE /* EnterView.swift */,
+			);
+			path = Enter;
+			sourceTree = "<group>";
+		};
 		646FE64C2D6108B80092780B = {
 			isa = PBXGroup;
 			children = (
 				646FE6572D6108B80092780B /* SportBag */,
+				644235362D677BFB005398DE /* notificationsvc */,
 				646FE6562D6108B80092780B /* Products */,
 				A22BB7AA5A850292A5D6E4D9 /* Pods */,
 				A37C2F627E1E7CBFFDCDF7D1 /* Frameworks */,
@@ -114,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				646FE6552D6108B80092780B /* SportBag.app */,
+				644235352D677BFB005398DE /* notificationsvc.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,6 +175,7 @@
 		646FE6572D6108B80092780B /* SportBag */ = {
 			isa = PBXGroup;
 			children = (
+				644235432D688066005398DE /* Enter */,
 				642FA89F2D64C48C0025FBF0 /* SportBag.entitlements */,
 				646FE69F2D6272020092780B /* Notificatioins */,
 				646FE69C2D62529E0092780B /* Reminder */,
@@ -139,7 +194,6 @@
 				646FE6612D6108B90092780B /* Assets.xcassets */,
 				646FE6632D6108B90092780B /* LaunchScreen.storyboard */,
 				646FE6662D6108B90092780B /* Info.plist */,
-				646FE68A2D6239FC0092780B /* Test.swift */,
 			);
 			path = SportBag;
 			sourceTree = "<group>";
@@ -275,6 +329,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		644235342D677BFB005398DE /* notificationsvc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 644235402D677BFB005398DE /* Build configuration list for PBXNativeTarget "notificationsvc" */;
+			buildPhases = (
+				644235312D677BFB005398DE /* Sources */,
+				644235322D677BFB005398DE /* Frameworks */,
+				644235332D677BFB005398DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = notificationsvc;
+			packageProductDependencies = (
+				644235412D677C05005398DE /* SdkPushExpress */,
+			);
+			productName = notificationsvc;
+			productReference = 644235352D677BFB005398DE /* notificationsvc.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		646FE6542D6108B80092780B /* SportBag */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 646FE6692D6108B90092780B /* Build configuration list for PBXNativeTarget "SportBag" */;
@@ -285,10 +359,12 @@
 				646FE6532D6108B80092780B /* Resources */,
 				646FE6842D622B170092780B /* Embed Frameworks */,
 				984045BC43F1316AC90A7364 /* [CP] Embed Pods Frameworks */,
+				6442353D2D677BFB005398DE /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6442353B2D677BFB005398DE /* PBXTargetDependency */,
 			);
 			name = SportBag;
 			packageProductDependencies = (
@@ -310,6 +386,9 @@
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					644235342D677BFB005398DE = {
+						CreatedOnToolsVersion = 15.4;
+					};
 					646FE6542D6108B80092780B = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -334,11 +413,19 @@
 			projectRoot = "";
 			targets = (
 				646FE6542D6108B80092780B /* SportBag */,
+				644235342D677BFB005398DE /* notificationsvc */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		644235332D677BFB005398DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		646FE6532D6108B80092780B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -394,6 +481,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		644235312D677BFB005398DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				644235382D677BFB005398DE /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		646FE6512D6108B80092780B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -409,13 +504,13 @@
 				646FE6932D62480A0092780B /* MainBagView.swift in Sources */,
 				646FE67C2D61FB4F0092780B /* EqSmallCell.swift in Sources */,
 				646FE6722D61E6260092780B /* ChooseWorkoutView.swift in Sources */,
-				646FE68B2D6239FC0092780B /* Test.swift in Sources */,
 				646FE6782D61E9F70092780B /* DataManager.swift in Sources */,
 				646FE66F2D61E3790092780B /* HomeView.swift in Sources */,
 				646FE67F2D622AA10092780B /* RealmManager.swift in Sources */,
 				646FE6592D6108B80092780B /* AppDelegate.swift in Sources */,
 				646FE6892D6237320092780B /* SavedBagCell.swift in Sources */,
 				646FE6952D6249BA0092780B /* MainBagCell.swift in Sources */,
+				644235452D688072005398DE /* EnterView.swift in Sources */,
 				646FE65B2D6108B80092780B /* SceneDelegate.swift in Sources */,
 				646FE69B2D6251B00092780B /* SettingsView.swift in Sources */,
 				646FE6A12D62720B0092780B /* NotificationsView.swift in Sources */,
@@ -423,6 +518,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6442353B2D677BFB005398DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 644235342D677BFB005398DE /* notificationsvc */;
+			targetProxy = 6442353A2D677BFB005398DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		646FE65E2D6108B80092780B /* Main.storyboard */ = {
@@ -444,6 +547,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6442353E2D677BFB005398DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = notificationsvc/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = notificationsvc;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SportBag.notificationsvc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6442353F2D677BFB005398DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = notificationsvc/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = notificationsvc;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SportBag.notificationsvc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		646FE6672D6108B90092780B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -567,15 +724,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B940250DAAFC4AF817DD5E3B /* Pods-SportBag.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SportBag/SportBag.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SportBag/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Access to the camera is required so you can add photos of items to your bag.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -586,7 +746,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.SportBag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -604,15 +764,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A3C5A0E494D4E009EAFB9502 /* Pods-SportBag.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SportBag/SportBag.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SportBag/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Access to the camera is required so you can add photos of items to your bag.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -623,7 +786,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.SportBag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -640,6 +803,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		644235402D677BFB005398DE /* Build configuration list for PBXNativeTarget "notificationsvc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6442353E2D677BFB005398DE /* Debug */,
+				6442353F2D677BFB005398DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		646FE6502D6108B80092780B /* Build configuration list for PBXProject "SportBag" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -694,6 +866,11 @@
 			productName = FlagsmithClient;
 		};
 		642FA8A42D64C4A60025FBF0 /* SdkPushExpress */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 642FA8A32D64C4A60025FBF0 /* XCRemoteSwiftPackageReference "pushexpress-swift-sdk" */;
+			productName = SdkPushExpress;
+		};
+		644235412D677C05005398DE /* SdkPushExpress */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 642FA8A32D64C4A60025FBF0 /* XCRemoteSwiftPackageReference "pushexpress-swift-sdk" */;
 			productName = SdkPushExpress;

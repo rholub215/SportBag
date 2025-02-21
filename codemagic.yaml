@@ -1,49 +1,65 @@
 workflows:
   ios-native-workflow:
-    name: iOS Native
+    name: iOS Native with Push Target
     max_build_duration: 120
     integrations:
-      app_store_connect: CodeMagic Api Key # <-- Change
+      app_store_connect: CodeMagic Api Key # <-- Ваш API Key
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.SportBag # <-- Change
+        bundle_identifier:
+          - com.SportBag                  # Основной таргет
+          - com.SportBag.notificationsvc  # Push-таргет
       vars:
-        BUNDLE_ID: "com.SportBag" # <-- Change
-        XCODE_WORKSPACE: "SportBag.xcworkspace" # <-- Change
-        XCODE_SCHEME: "SportBag" # <-- Change
-        APP_STORE_APPLE_ID: 6742202690 # <-- Change
+        BUNDLE_ID: "com.SportBag"         # Основной Bundle ID
+        PUSH_BUNDLE_ID: "com.SportBag.notificationsvc" # Bundle ID для пушей
+        XCODE_WORKSPACE: "SportBag.xcworkspace" # Ваш workspace
+        XCODE_SCHEME: "SportBag"          # Схема основного таргета
+        PUSH_TARGET_SCHEME: "notificationsvc" # Схема push-таргета
+        APP_STORE_APPLE_ID: 6742202690      # <-- Замените на ваш Apple ID приложения
       xcode: 15.3
     scripts:
-      - name: Set up provisioning profiles settings on Xcode project
-        script: xcode-project use-profiles
+      - name: Set up provisioning profiles for all targets
+        script: |
+          xcode-project use-profiles \
+            --target "SportBag" \         # Основной таргет
+            --bundle-id "$BUNDLE_ID" \
+            --profile-name "CodeMagic Api Key"        # Имя основной провижки
+
+          xcode-project use-profiles \
+            --target "notificationsvc" \  # Push-таргет
+            --bundle-id "$PUSH_BUNDLE_ID" \
+            --profile-name "PushTargetProfile" # Имя провижки для пушей
+
       - name: Increment build number
         script: |
           cd $CM_BUILD_DIR
           LATEST_BUILD_NUMBER=$(app-store-connect get-latest-app-store-build-number "$APP_STORE_APPLE_ID")
           agvtool new-version -all $(($LATEST_BUILD_NUMBER + 1))
-      - name: Build ipa for distribution
+
+      - name: Build ipa with multiple targets
         script: |
           xcode-project build-ipa \
             --workspace "$CM_BUILD_DIR/$XCODE_WORKSPACE" \
-            --scheme "$XCODE_SCHEME"
+            --scheme "$XCODE_SCHEME" \
+            --additional-schemes "$PUSH_TARGET_SCHEME"
+
     artifacts:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+
     publishing:
       email:
         recipients:
-          - eldigo02@gmail.com # <-- Change
+          - eldigo02@gmail.com # <-- Замените на ваш email
         notify:
           success: true
           failure: false
       app_store_connect:
         auth: integration
-        # Configuration related to TestFlight (optional)
-        # Note: This action is performed during post-processing.
+        # Конфигурация для TestFlight (опционально)
         submit_to_testflight: false
-        # Configuration related to App Store (optional)
-        # Note: This action is performed during post-processing.
+        # Конфигурация для App Store (опционально)
         submit_to_app_store: false
