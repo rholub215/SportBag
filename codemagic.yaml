@@ -3,13 +3,11 @@ workflows:
     name: iOS Native with Push Target
     max_build_duration: 120
     integrations:
-      app_store_connect: CodeMagic Api Key # <-- Ваш API Key
+      app_store_connect: CodeMagic Api Key # <-- Имя интеграции (не менять)
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier:
-          - com.SportBag                  # Основной таргет
-          - com.SportBag.notificationsvc  # Push-таргет
+        bundle_identifier: "com.SportBag" # Основной Bundle ID (строка)
       vars:
         BUNDLE_ID: "com.SportBag"         # Основной Bundle ID
         PUSH_BUNDLE_ID: "com.SportBag.notificationsvc" # Bundle ID для пушей
@@ -21,11 +19,13 @@ workflows:
     scripts:
       - name: Set up provisioning profiles for all targets
         script: |
+          # Настройка подписи для основного таргета
           xcode-project use-profiles \
             --target "SportBag" \         # Основной таргет
             --bundle-id "$BUNDLE_ID" \
-            --profile-name "CodeMagic Api Key"        # Имя основной провижки
+            --profile-name "CodeMagic Api Key" # Имя основной провижки
 
+          # Настройка подписи для push-таргета
           xcode-project use-profiles \
             --target "notificationsvc" \  # Push-таргет
             --bundle-id "$PUSH_BUNDLE_ID" \
@@ -53,7 +53,7 @@ workflows:
     publishing:
       email:
         recipients:
-          - eldigo02@gmail.com # <-- Замените на ваш email
+          - your-email@gmail.com # <-- Замените на ваш email
         notify:
           success: true
           failure: false
