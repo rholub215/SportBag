@@ -7,7 +7,7 @@ workflows:
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: "com.SportBag" # Основной Bundle ID (строка)
+        bundle_identifier: "com.SportBag" # Основной Bundle ID
       vars:
         BUNDLE_ID: "com.SportBag"         # Основной Bundle ID
         PUSH_BUNDLE_ID: "com.SportBag.notificationsvc" # Bundle ID для пушей
@@ -17,20 +17,6 @@ workflows:
         APP_STORE_APPLE_ID: 6742202690      # <-- Замените на ваш Apple ID приложения
       xcode: 15.3
     scripts:
-      - name: Set up provisioning profiles for all targets
-        script: |
-          # Настройка подписи для основного таргета
-          xcode-project use-profiles \
-            --target "SportBag" \         # Основной таргет
-            --bundle-id "$BUNDLE_ID" \
-            --profile-name "CodeMagic Api Key" # Имя основной провижки
-
-          # Настройка подписи для push-таргета
-          xcode-project use-profiles \
-            --target "notificationsvc" \  # Push-таргет
-            --bundle-id "$PUSH_BUNDLE_ID" \
-            --profile-name "PushTargetProfile" # Имя провижки для пушей
-
       - name: Increment build number
         script: |
           cd $CM_BUILD_DIR
