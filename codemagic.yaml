@@ -46,7 +46,7 @@ workflows:
     publishing:
       email:
         recipients:
-          - @gmail.com # <-- Замени на свою почту
+          - eldigo02@gmail.com # <-- Замени на свою почту
         notify:
           success: true
           failure: false
