@@ -78,7 +78,6 @@ struct SettingsView: View {
                     
                     Button {
                         isPolicied.toggle()
-                        openFeedback(url: "")
                     } label: {
                         HStack {
                             Text("Privacy Policy")
