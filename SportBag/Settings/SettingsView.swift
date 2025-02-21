@@ -13,6 +13,9 @@ struct SettingsView: View {
     @State private var isOnboardnigShown = false
     @State private var isNotificationShown = false
     
+    @State private var isFeedbackShown = false
+    @State private var isPolicied = false
+    
     var body: some View {
         ZStack {
             Rectangle()
@@ -59,7 +62,7 @@ struct SettingsView: View {
                     .frame(height: 50)
                     
                     Button {
-                        openFeedback(url: "https://sites.google.com/view/prizerpickthesportbag/contact-us")
+                        isFeedbackShown.toggle()
                     } label: {
                         HStack {
                             Text("Feedback")
@@ -74,7 +77,8 @@ struct SettingsView: View {
                     .frame(height: 50)
                     
                     Button {
-                        openFeedback(url: "https://sites.google.com/view/prizerpickthesportbag/privacy-policy")
+                        isPolicied.toggle()
+                        openFeedback(url: "")
                     } label: {
                         HStack {
                             Text("Privacy Policy")
@@ -110,6 +114,10 @@ struct SettingsView: View {
         .fullScreenCover(isPresented: $isOnboardnigShown) {
             OnboardingView()
         }
+        .sheet(isPresented: $isFeedbackShown) {
+            PrivacyPolicyWrapper(privacyURL: "https://sites.google.com/view/prizerpickthesportbag/contact-us")
+                .presentationDetents([.height(size().height / 1.15)])
+        }
         .alert("Are you sure?", isPresented: $isNotificationShown) {
             Button {
                 RealmManager.shared.clearDatabase()
@@ -124,13 +132,11 @@ struct SettingsView: View {
         } message: {
             Text("All bags will be deleted and you will have to create them again.")
         }
-
-    }
-    
-    func openFeedback(url: String) {
-        if let url = URL(string: url) {
-            UIApplication.shared.open(url)
+        .sheet(isPresented: $isPolicied) {
+            PrivacyPolicyWrapper(privacyURL: "https://sites.google.com/view/prizerpickthesportbag/privacy-policy")
+                .presentationDetents([.height(size().height / 1.15)])
         }
+
     }
 }
 
