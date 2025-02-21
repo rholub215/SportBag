@@ -1,61 +1,56 @@
 workflows:
   ios-native-workflow:
-    name: iOS Native with Push Target
+    name: iOS Native
     max_build_duration: 120
     integrations:
-      app_store_connect: CodeMagic Api Key # <-- Имя интеграции (не менять)
+      app_store_connect: CodeMagic Api Key
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: "com.SportBag" # Основной Bundle ID
+        bundle_identifier: com.SportBag
+        provisioning_profile: "CodeMagic Api Key"
+        additional_bundle_identifiers:
+          - bundle_identifier: com.SportBag.notificationsvc
+            provisioning_profile: "CodeMagic Api Key Push"
       vars:
-        BUNDLE_ID: "com.SportBag"         # Основной Bundle ID
-        PUSH_BUNDLE_ID: "com.SportBag.notificationsvc" # Bundle ID для пушей
-        XCODE_WORKSPACE: "SportBag.xcworkspace" # Ваш workspace
-        XCODE_SCHEME: "SportBag"          # Схема основного таргета
-        PUSH_TARGET_SCHEME: "notificationsvc" # Схема push-таргета
-        APP_STORE_APPLE_ID: 6742202690      # <-- Замените на ваш Apple ID приложения
+        BUNDLE_ID: "com.SportBag"
+        PUSH_BUNDLE_ID: "com.SportBag.notificationsvc"
+        XCODE_WORKSPACE: "SportBag.xcworkspace"
+        XCODE_SCHEME: "SportBag"
+        PUSH_TARGET_SCHEME: "notificationsvc"
+        APP_STORE_APPLE_ID: 6742202690 # <-- Укажи правильный ID
       xcode: 15.3
     scripts:
+      - name: Set up provisioning profiles settings on Xcode project
+        script: xcode-project use-profiles
       - name: Increment build number
         script: |
           cd $CM_BUILD_DIR
           LATEST_BUILD_NUMBER=$(app-store-connect get-latest-app-store-build-number "$APP_STORE_APPLE_ID")
           agvtool new-version -all $(($LATEST_BUILD_NUMBER + 1))
-
-      - name: Build main target
+      - name: Build ipa for distribution (Main App)
         script: |
           xcode-project build-ipa \
             --workspace "$CM_BUILD_DIR/$XCODE_WORKSPACE" \
             --scheme "$XCODE_SCHEME"
-
-      - name: Build push target
+      - name: Build ipa for Push Notifications target
         script: |
-          xcodebuild \
-            -workspace "$CM_BUILD_DIR/$XCODE_WORKSPACE" \
-            -scheme "$PUSH_TARGET_SCHEME" \
-            -configuration Release \
-            -sdk iphoneos \
-            -archivePath "$CM_BUILD_DIR/build/notificationsvc.xcarchive" \
-            archive
-
+          xcode-project build-ipa \
+            --workspace "$CM_BUILD_DIR/$XCODE_WORKSPACE" \
+            --scheme "$PUSH_TARGET_SCHEME"
     artifacts:
       - build/ios/ipa/*.ipa
-      - build/notificationsvc.xcarchive
       - /tmp/xcodebuild_logs/*.log
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
-
     publishing:
       email:
         recipients:
-          - your-email@gmail.com # <-- Замените на ваш email
+          - @gmail.com # <-- Замени на свою почту
         notify:
           success: true
           failure: false
       app_store_connect:
         auth: integration
-        # Конфигурация для TestFlight (опционально)
         submit_to_testflight: false
-        # Конфигурация для App Store (опционально)
         submit_to_app_store: false
