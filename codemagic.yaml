@@ -7,11 +7,6 @@ workflows:
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.SportBag
-        provisioning_profile: "CodeMagic Api Key"
-        additional_bundle_identifiers:
-          - bundle_identifier: com.SportBag.notificationsvc
-            provisioning_profile: "CodeMagic Api Key Push"
       vars:
         BUNDLE_ID: "com.SportBag"
         PUSH_BUNDLE_ID: "com.SportBag.notificationsvc"
